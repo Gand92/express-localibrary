@@ -41,7 +41,7 @@ app.set('view engine', 'pug');
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
-      'script-src': ["'self'", 'code.jquery.comm', 'cdn.jsdelivr.net'],
+      'script-src': ["'self'", 'code.jquery.com', 'cdn.jsdelivr.net'],
     },
   })
 );
