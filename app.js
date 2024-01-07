@@ -24,7 +24,9 @@ app.use(limiter);
 
 //Setup mongoose connection
 const mongoose = require('mongoose');
-const mongoDB = process.env.MONGODB_URI;
+const mongoDB =
+  process.env.MONGODB_URI ||
+  'mongodb+srv://alessandrorotili:express@cluster0.z9j1yd9.mongodb.net/local_library?retryWrites=true&w=majority';
 mongoose.set('strictQuery', false);
 
 main().catch((err) => console.log(err));
